@@ -1,9 +1,11 @@
-from src.services.student import get_students
+from tabulate import tabulate
+from ..services.student import get_students
 
 
 def view_students() -> None:
     print('List Students:')
     students = get_students()
-    for student in students:
-        print(' - ', end='')
-        print(student)
+    headers = students[0].__dict__.keys()
+    rows = map(lambda student: student.__dict__.values(), students)
+
+    print(tabulate(rows, headers=headers, tablefmt="grid"))

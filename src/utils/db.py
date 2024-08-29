@@ -11,7 +11,8 @@ db_config = {
     'user': getenv('DB_USER'),
     'password': getenv('DB_PASSWORD'),
     'host': getenv('DB_HOST'),  # or your database server IP
-    'port': getenv('DB_PORT')  # Default PostgreSQL port
+    'port': getenv('DB_PORT'),  # Default PostgreSQL port,
+    'connect_timeout': 10
 }
 
 # Connection pool

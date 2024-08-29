@@ -1,6 +1,9 @@
 import os
+import platform
 
 
 def clear_screen():
-    os.system('cls')
-    os.system('clear')
+    if platform.system() == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
