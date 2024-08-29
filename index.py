@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
-from .src.views import (student, show_user_selection,
-                        show_return_selection, show_wrong_selection)
-from .src.utils.common import clear_screen
+from src.views import (student, show_user_selection,
+                       show_return_selection, show_wrong_selection)
+from src.utils.common import clear_screen
 
 
 def process_view_student():
